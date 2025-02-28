@@ -1,15 +1,19 @@
 import locale
 
-
 locale.setlocale(locale.LC_ALL, 'pt_BR.UTF-8')
 
 def deposit_function(deposit_amount, account_balance=0, transactions=[]):
-    '''
-    Função para realizar depósito na conta do usuário
-    :param deposit_amount: Valor do depósito
-    :param account_balance: Saldo da conta do usuário
-    :return: Novo saldo da conta e mensagem de sucesso ou erro
-    '''
+    """
+    Função para realizar depósito na conta do usuário.
+
+    Esta função recebe um valor de depósito e o saldo atual da conta, valida o valor do depósito,
+    atualiza o saldo da conta e registra a transação na lista de transações.
+
+    :param deposit_amount: Valor do depósito (pode ser uma string ou um número).
+    :param account_balance: Saldo atual da conta do usuário (padrão é 0).
+    :param transactions: Lista de transações realizadas na conta.
+    :return: Novo saldo da conta e mensagem de sucesso ou erro.
+    """
     try:
         deposit_amount = float(deposit_amount)
         account_balance = float(account_balance)
@@ -25,11 +29,3 @@ def deposit_function(deposit_amount, account_balance=0, transactions=[]):
         return account_balance, 'Valor do depósito deve ser um número!'
     except Exception as error:
         return account_balance, f'Erro ao realizar depósito: {error}'
-
-
-# Teste da função
-if __name__ == '__main__':
-    deposito = deposit_function(30000)
-    print(deposito)
-    deposito = deposit_function('500')
-    print(deposito)
