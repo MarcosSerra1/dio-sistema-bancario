@@ -17,6 +17,7 @@ Este é um projeto desenvolvido como parte da trilha de Python da DIO. O projeto
 
 ## Estrutura do Projeto
 
+```
 dio-sistema-bancario
 ├── main.py
 └── utils/
@@ -24,6 +25,7 @@ dio-sistema-bancario
     ├── deposit.py
     ├── extract.py
     └── withdrawal.py
+```
 
 ## Considerações
 
