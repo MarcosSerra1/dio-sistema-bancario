@@ -16,10 +16,10 @@ def extract_function(account_balance, transactions):
     try:
         account_balance = float(account_balance)
         extract_message = f'Seu saldo é de {locale.currency(account_balance, grouping=True)}\n'
-        extract_message += 'Histórico de transações:\n'
+        extract_message += f"\n* {'Histórico de transações:':^46} *\n"
 
         if not transactions:
-            return extract_message + 'Nenhuma transação realizada!'
+            return extract_message + '\nNenhuma transação realizada!'
         else:
             for transaction in transactions:
                 extract_message += f'{transaction}\n'
