@@ -2,7 +2,7 @@ import locale
 
 locale.setlocale(locale.LC_ALL, 'pt_BR.UTF-8')
 
-def deposit_function(deposit_amount, account_balance=0, transactions=[]):
+def deposit_function(deposit_amount: float, account_balance: int = 0, transactions: list = []):
     """
     Função para realizar depósito na conta do usuário.
 
